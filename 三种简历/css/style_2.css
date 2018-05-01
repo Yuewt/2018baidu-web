@@ -1,0 +1,55 @@
+* {
+  margin:0;
+  padding:0;
+}
+.clearfix { 
+  zoom:1; 
+}
+.clearfix:after {
+  content:"."; 
+  display:block; 
+  height:0; 
+  visibility:hidden; 
+  clear:both; 
+}
+
+.box {
+  height: 100%;
+  width: 100%
+}
+.header {
+  float: left;
+  width:10%;
+  height: 844px;
+  text-align: center;
+  padding-top: 62px;
+  background-color: #00BBFF;
+  color: #fff;
+  font-size: 20px;
+}
+.header input {
+  display: block;
+  margin-top: 10px;
+  margin-left: 40%;
+}
+.main {
+  float: left;
+  margin-left: 1%;
+  width: 80%;
+}
+.part {
+  margin-top: 35px;
+  line-height: 25px;
+}
+.part h2 {
+  margin-bottom: 30px;
+}
+.part .spacing {
+  padding-right: 4%; 
+}
+.part .overstriking {
+  font-weight: bold;
+}
+.part .row {
+  margin-bottom: 30px;
+}
