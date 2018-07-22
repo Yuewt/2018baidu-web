@@ -36,7 +36,12 @@
             result.innerHTML = first.value * second.value;
         }
         divide.onclick = function() {
-            result.innerHTML = first.value / second.value;
+            if (second.value==0) {
+                alert("除数不能为0");
+            }
+            else{
+                result.innerHTML = first.value / second.value;
+            }
         }
     </script>
 </body>
