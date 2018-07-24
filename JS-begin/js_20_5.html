@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Sprite</title>
+	<style type="text/css">
+		.erik {
+			width: 480px;
+			height: 480px;
+			background-image: url("erik_ce204002.jpg");
+		}
+	</style>
+</head>
+<body>
+	<div class="erik">
+	</div>
+	<script type="text/javascript">
+		window.onload = function() {
+			var erik = document.querySelector(".erik");
+			var y = 480;
+			function gif() {
+				erik.style.backgroundPositionY = "-" + y + "px";
+				y>8160?y=480:y+=480;
+			}
+			setInterval(gif,100);
+		}
+	</script>
+</body>
+</html>

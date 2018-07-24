@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="fade-obj" style="width:300px;height:300px;background:#000">
+	</div>
+	<button id="fade-btn">淡出</button>
+	<script type="text/javascript">
+		var obj = document.getElementById("fade-obj");
+		var btn = document.getElementById("fade-btn");
+		var init = 1;
+		function out1() {
+			obj.style.opacity = init;
+			init = init - 0.1;
+			btn.disabled = true;
+			if (init > 0) {
+				setTimeout(out1,1000);
+			} else if (init <= 0) {
+				btn.innerHTML = "淡入";
+				btn.disabled  = false;
+				btn.addEventListener("click",in1);
+			}
+		}
+		function in1() {
+			obj.style.opacity = init;
+			init = init + 0.1;
+			btn.disabled = true;
+			if (init < 1) {
+				setTimeout(in1,1000);
+			} else if (init >= 1) {
+				btn.innerHTML = "淡出";
+				btn.disabled = false;
+				btn.addEventListener("click",out1);
+			}
+		}
+		btn.addEventListener("click",out1);
+	</script>
+</body>
+</html>
